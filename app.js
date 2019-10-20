@@ -17,6 +17,10 @@ const Post = mongoose.model("Post",postSchema);
 const homeStartingContent = "Welcome to Daily Journal !";
 const aboutContent = "Hello, I'm Saketh, a Web Developer.";
 const contactContent = "Want to get in touch with me ?";
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
 
 const app = express();
 
